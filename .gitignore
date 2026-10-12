@@ -1,0 +1,23 @@
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor folders
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs and temp files
+*.log
+*.tmp
+*.bak
+~$*
+
+# Dependencies (not needed for this static template, ignored just in case)
+node_modules/
+
+# Local env
+.env
+.env.local
