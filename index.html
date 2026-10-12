@@ -1,0 +1,947 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050506">
+  <meta name="color-scheme" content="dark">
+  <title>Meridian Studio — Visual Engineering for Real Estate Launches</title>
+  <meta name="description" content="Launch films, 3D visualization and immersive websites for real estate. Meridian turns unbuilt architecture into desire before construction begins.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Meridian Studio">
+  <meta property="og:title" content="Meridian Studio — Visual Engineering for Real Estate Launches">
+  <meta property="og:description" content="Launch films, 3D visualization and immersive websites for real estate, directed as cinema.">
+  <meta property="og:image" content="assets/img/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-var.woff2" crossorigin>
+  <link rel="preload" as="image" href="assets/img/hero-architecture.jpg" fetchpriority="high">
+
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Meridian Studio",
+    "description": "Visual engineering studio for real estate launches. Films, 3D visualization and immersive websites.",
+    "url": "https://example.com"
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#films">Skip to content</a>
+
+  <!-- ==================== PRELOADER ==================== -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <canvas class="intro__canvas" id="introCanvas"></canvas>
+    <div class="intro__top">
+      <p class="intro__brand"><b>MERIDIAN</b>&nbsp;&nbsp;//&nbsp;&nbsp;LIGHT ENGINE</p>
+      <p class="intro__meta label">Prime light · Est. 2019</p>
+    </div>
+    <div class="intro__center">
+      <h2 class="intro__line">The unseen<br>becomes <span class="em">light.</span></h2>
+      <div class="intro__bar"><i id="introBar"></i></div>
+      <p class="intro__pct" id="introPct">0%</p>
+    </div>
+    <div class="intro__bottom">
+      <p class="label">Preparing opening…</p>
+      <button class="intro__skip" id="skipIntro" type="button">Skip introduction <span>↘</span></button>
+    </div>
+  </div>
+
+  <!-- ==================== CHROME ==================== -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-line" aria-hidden="true"><i id="scrollLine"></i></div>
+
+  <nav class="rail" id="rail" aria-label="Section index">
+    <a href="#films">01 · Films</a>
+    <a href="#work">04 · Work</a>
+    <a href="#create">05 · Create</a>
+    <a href="#process">08 · Process</a>
+    <a href="#contact">10 · Contact</a>
+  </nav>
+
+  <header class="site-header" data-header>
+    <a href="#top" class="brand" aria-label="Meridian Studio — home">
+      Meridian<sup>®</sup>
+      <small>Visual engineering</small>
+    </a>
+    <div class="header-right">
+      <p class="header-clock">Local&nbsp;/&nbsp;<span data-clock>00:00:00</span></p>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="lbl">Menu</span>
+        <span class="dots" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__links" aria-label="Main navigation">
+      <a class="menu__link" href="#films"><span class="idx">01</span><span class="word">Films</span><span class="dup">Films</span></a>
+      <a class="menu__link" href="#why"><span class="idx">02</span><span class="word">Studio</span><span class="dup">Studio</span></a>
+      <a class="menu__link" href="#work"><span class="idx">04</span><span class="word">Work</span><span class="dup">Work</span></a>
+      <a class="menu__link" href="#create"><span class="idx">05</span><span class="word">Services</span><span class="dup">Services</span></a>
+      <a class="menu__link" href="#contact"><span class="idx">10</span><span class="word">Contact</span><span class="dup">Contact</span></a>
+    </nav>
+    <div class="menu__foot">
+      <div class="col">
+        <p class="label">New business</p>
+        <a class="u-sweep" href="mailto:hello@meridian.studio">hello@meridian.studio</a>
+        <a class="u-sweep" href="https://wa.me/923000000000" target="_blank" rel="noopener">WhatsApp ↗</a>
+      </div>
+      <div class="col">
+        <p class="label">Social</p>
+        <a class="u-sweep" href="#" rel="noopener">Instagram</a>
+        <a class="u-sweep" href="#" rel="noopener">Vimeo</a>
+      </div>
+      <div class="col">
+        <p class="label">Studio time</p>
+        <p>Local / <span data-clock>00:00:00</span></p>
+        <p>Remote · Worldwide</p>
+      </div>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" data-hero aria-label="Introduction">
+      <div class="hero__bg">
+        <img src="assets/img/hero-architecture.jpg" data-hero-src alt="Residential tower glowing at dusk above a still infinity pool" width="1672" height="941" fetchpriority="high">
+      </div>
+      <canvas class="hero__smoke" id="heroSmoke" aria-hidden="true"></canvas>
+
+      <div class="hero__inner">
+        <p class="hero__kicker label" data-reveal style="--d:.15s">Unbuilt architecture — directed as cinema</p>
+        <h1 class="h1 hero__title">
+          <span class="rl"><span class="ri" style="--d:.05s">We engineer</span></span>
+          <span class="rl"><span class="ri em" style="--d:.22s">light.</span></span>
+        </h1>
+        <div class="hero__row">
+          <p class="lede" data-reveal style="--d:.4s">4K films, photoreal visualization and websites for real estate launches. We bring unbuilt architecture — and the life around it — into view.</p>
+          <div class="hero__ctas" data-reveal style="--d:.55s">
+            <a class="btn btn--solid" href="#contact" data-magnetic><span>Discuss your launch</span><i class="arr">↗</i></a>
+            <a class="btn" href="#films" data-magnetic><span>Watch our work</span><i class="arr">↓</i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true"><span>Scroll</span><i></i></div>
+    </section>
+
+    <!-- ==================== INTENT ==================== -->
+    <section class="intent wrap" aria-label="Fields of work">
+      <div class="intent__head label">
+        <span class="num">01</span><span>Intent → Light</span>
+      </div>
+      <ol class="intent__list">
+        <li class="intent__item" data-reveal style="--d:0s"><a href="#work"><span><span class="idx">01&nbsp;&nbsp;</span>Architecture</span><span class="go">↗</span></a></li>
+        <li class="intent__item" data-reveal style="--d:.05s"><a href="#films"><span><span class="idx">02&nbsp;&nbsp;</span>People</span><span class="go">↗</span></a></li>
+        <li class="intent__item" data-reveal style="--d:.1s"><a href="#verticals"><span><span class="idx">03&nbsp;&nbsp;</span>Interiors</span><span class="go">↗</span></a></li>
+        <li class="intent__item" data-reveal style="--d:.15s"><a href="#engine"><span><span class="idx">04&nbsp;&nbsp;</span>Landscape</span><span class="go">↗</span></a></li>
+      </ol>
+    </section>
+
+    <!-- ==================== 01 / SELECTED FILMS ==================== -->
+    <section class="section" id="films">
+      <div class="wrap section__head">
+        <div class="sec-head label"><span class="num">01</span><span>/ Selected films</span></div>
+        <h2 class="h2 section__title">
+          <span class="rl"><span class="ri">Direction you can see.</span></span>
+          <span class="rl"><span class="ri em" style="--d:.14s">And feel.</span></span>
+        </h2>
+        <div class="section__intro">
+          <p class="lede" data-reveal>Architecture, education, dining and sport. Four projects, four stories directed by Meridian.</p>
+          <a class="arrow-link" href="#verticals" data-reveal style="--d:.1s">Explore all films <span class="arr">↘</span></a>
+        </div>
+      </div>
+
+      <div class="films__track-wrap">
+        <div class="films__track" id="filmsTrack" data-cursor="Drag">
+          <article class="film-card" data-film data-title="Solmare" data-meta="Solmare — Residential · Lifestyle — Launch film" data-duration="2:07" data-poster="assets/img/film-solmare.jpg" data-orientation="landscape" data-cursor="Play" role="button" tabindex="0">
+            <figure class="film-card__poster">
+              <img src="assets/img/film-solmare.jpg" alt="Swimming pool and cabanas at dusk in the Solmare film" width="1672" height="941" loading="lazy">
+              <div class="film-card__meta-top"><span>P01</span><span>02:07 · 16:9</span></div>
+              <span class="film-card__play">▶</span>
+            </figure>
+            <div class="film-card__body">
+              <div>
+                <h3 class="film-card__title">Solmare</h3>
+                <span class="film-card__watch">Watch the film <b>▶</b></span>
+              </div>
+              <p class="film-card__tags">Residential · Lifestyle</p>
+            </div>
+          </article>
+
+          <article class="film-card" data-film data-title="Kindred" data-meta="Kindred — Education · Community — Launch film" data-duration="1:21" data-poster="assets/img/film-kindred.jpg" data-orientation="landscape" data-cursor="Play" role="button" tabindex="0">
+            <figure class="film-card__poster">
+              <img src="assets/img/film-kindred.jpg" alt="A child welcomed at the entrance of Kindred school in warm morning light" width="1672" height="941" loading="lazy">
+              <div class="film-card__meta-top"><span>P02</span><span>01:21 · 16:9</span></div>
+              <span class="film-card__play">▶</span>
+            </figure>
+            <div class="film-card__body">
+              <div>
+                <h3 class="film-card__title">Kindred</h3>
+                <span class="film-card__watch">Watch the film <b>▶</b></span>
+              </div>
+              <p class="film-card__tags">Education · Community</p>
+            </div>
+          </article>
+
+          <article class="film-card" data-film data-title="Ombra" data-meta="Ombra — Hospitality · Experience — Brand film" data-duration="1:12" data-poster="assets/img/film-ombra.jpg" data-orientation="landscape" data-cursor="Play" role="button" tabindex="0">
+            <figure class="film-card__poster">
+              <img src="assets/img/film-ombra.jpg" alt="Amber lamps above stone tables inside Ombra restaurant" width="1672" height="941" loading="lazy">
+              <div class="film-card__meta-top"><span>P03</span><span>01:12 · 16:9</span></div>
+              <span class="film-card__play">▶</span>
+            </figure>
+            <div class="film-card__body">
+              <div>
+                <h3 class="film-card__title">Ombra</h3>
+                <span class="film-card__watch">Watch the film <b>▶</b></span>
+              </div>
+              <p class="film-card__tags">Hospitality · Experience</p>
+            </div>
+          </article>
+
+          <article class="film-card" data-film data-title="Alto Tennis Club" data-meta="Alto Tennis Club — Sport · Community — Launch film" data-duration="1:12" data-poster="assets/img/film-alto.jpg" data-orientation="landscape" data-cursor="Play" role="button" tabindex="0">
+            <figure class="film-card__poster">
+              <img src="assets/img/film-alto.jpg" alt="Athlete serving under stadium lights at Alto Tennis Club" width="1672" height="941" loading="lazy">
+              <div class="film-card__meta-top"><span>P04</span><span>01:12 · 16:9</span></div>
+              <span class="film-card__play">▶</span>
+            </figure>
+            <div class="film-card__body">
+              <div>
+                <h3 class="film-card__title">Alto Tennis Club</h3>
+                <span class="film-card__watch">Watch the film <b>▶</b></span>
+              </div>
+              <p class="film-card__tags">Sport · Community</p>
+            </div>
+          </article>
+        </div>
+        <div class="films__progress" aria-hidden="true"><i id="filmsProgress"></i></div>
+      </div>
+    </section>
+
+    <!-- ==================== 02 / WHY ==================== -->
+    <section class="section wrap" id="why">
+      <div class="section__head">
+        <div class="sec-head label"><span class="num">02</span><span>/ Why Meridian</span></div>
+        <h2 class="h2 section__title">
+          <span class="rl"><span class="ri">What makes a film</span></span>
+          <span class="rl"><span class="ri em" style="--d:.14s">a Meridian film.</span></span>
+        </h2>
+      </div>
+      <div class="why__grid">
+        <div class="why__col" data-reveal style="--d:0s">
+          <span class="why__roman">I</span>
+          <h3>Architecture, understood</h3>
+          <p>Plans, perspectives and references guide volume, material and light. Understanding the project comes before creating the image.</p>
+          <a class="arrow-link" href="#engine">See the render-to-film process <span class="arr">↗</span></a>
+        </div>
+        <div class="why__col" data-reveal style="--d:.1s">
+          <span class="why__roman">II</span>
+          <h3>Life within the frame</h3>
+          <p>People, gestures and everyday rituals give spaces context. Architecture stops being a model and becomes part of a story.</p>
+          <a class="arrow-link" href="#films">See life in the frame <span class="arr">↗</span></a>
+        </div>
+        <div class="why__col" data-reveal style="--d:.2s">
+          <span class="why__roman">III</span>
+          <h3>One direction, every deliverable</h3>
+          <p>From film to website and campaign, the same visual language runs through everything we ship for a launch.</p>
+          <a class="arrow-link" href="#sites">Explore the websites <span class="arr">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 03 / RENDER INTO FILM ==================== -->
+    <section class="section wrap" id="engine">
+      <div class="section__head">
+        <div class="sec-head label"><span class="num">03</span><span>/ Render into film</span></div>
+        <p class="label" data-reveal>Intent — Light — Desire</p>
+        <h2 class="h2 section__title">
+          <span class="rl"><span class="ri">From a base render</span></span>
+          <span class="rl"><span class="ri em" style="--d:.14s">to an experience.</span></span>
+        </h2>
+        <p class="lede" data-reveal>From the first neutral image to the final graded frame. Drag the handle — or step through the stages — to see how light, atmosphere and weather change the same architecture.</p>
+      </div>
+
+      <div class="engine__grid">
+        <div class="engine__steps">
+          <p class="engine__count" id="engineCount">02 / 03</p>
+          <button class="engine__step" type="button">
+            <h3>The starting render</h3>
+            <p>The neutral visualization establishes massing and its dialogue with the marina. Everything begins here.</p>
+            <span class="go">Show stage ↗</span>
+          </button>
+          <button class="engine__step" type="button">
+            <h3>Light &amp; atmosphere</h3>
+            <p>Sun angle, haze and reflection are tuned until the scene holds its breath. This is where mood is decided.</p>
+            <span class="go">Show stage ↗</span>
+          </button>
+          <button class="engine__step" type="button">
+            <h3>The film frame</h3>
+            <p>Grade, grain and motion timing turn the image into cinema. Open any film above to see the result moving.</p>
+            <span class="go">Show stage ↗</span>
+          </button>
+        </div>
+
+        <figure class="compare" id="compare" data-cursor="Slide" style="--x:55%">
+          <img class="compare__before" src="assets/img/compare-building.jpg" alt="Neutral base render of a terraced residential tower above a marina" width="1672" height="941" loading="lazy">
+          <img class="compare__after" src="assets/img/compare-building.jpg" alt="" aria-hidden="true" width="1672" height="941" loading="lazy">
+          <div class="compare__veil" aria-hidden="true"></div>
+          <div class="compare__handle" aria-hidden="true"></div>
+          <span class="compare__tag compare__tag--l">Base render</span>
+          <span class="compare__tag compare__tag--r">Film grade</span>
+        </figure>
+      </div>
+      <p class="create__fine wrap" style="padding-inline:0; margin-top:22px" data-reveal>Comparison from a Meridian study. The stages are discrete — the interactive handle lets you decide where the render ends and the film begins.</p>
+    </section>
+
+    <!-- ==================== 04 / SELECTED PROJECTS ==================== -->
+    <section class="section" id="work">
+      <div class="wrap section__head">
+        <div class="sec-head label"><span class="num">04</span><span>/ Selected projects</span></div>
+        <h2 class="h2 section__title">
+          <span class="rl"><span class="ri">Places worth</span></span>
+          <span class="rl"><span class="ri em" style="--d:.14s">a closer look.</span></span>
+        </h2>
+        <p class="lede" data-reveal>Solmare, Duna and Lumen Quay. Three launches where architecture, landscape and daily rituals shaped the direction of each film.</p>
+      </div>
+
+      <div class="stack wrap">
+        <article class="stack-card" data-reveal>
+          <div class="stack-card__frame">
+            <div class="stack-card__img"><img src="assets/img/project-solmare.jpg" alt="Lagoon pool weaving between white villas at Solmare" width="1536" height="1024" loading="lazy"></div>
+            <div class="stack-card__top"><span>01 / 03</span><span>Solmare · Condominium spa resort</span></div>
+            <div class="stack-card__body">
+              <h3 class="stack-card__title">Water meets <span class="em">form.</span></h3>
+              <div class="stack-card__row">
+                <p class="stack-card__meta">Coastal district · Film · Visual direction · Digital experience</p>
+                <a class="btn" href="#contact" data-magnetic><span>View full case study</span><i class="arr">↗</i></a>
+              </div>
+              <p class="stack-card__note"><b>The Meridian contribution</b>From the masterplan and reference archive supplied by the client to scenes shaped around water, leisure and human presence — curation and finishing, color, rhythm, score and sound design.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="stack-card" data-reveal>
+          <div class="stack-card__frame">
+            <div class="stack-card__img"><img src="assets/img/project-duna.jpg" alt="Aerial dusk view of terraced pools cascading toward the sea at Duna Terraces" width="1536" height="1024" loading="lazy"></div>
+            <div class="stack-card__top"><span>02 / 03</span><span>Duna Terraces · Complete masterplan</span></div>
+            <div class="stack-card__body">
+              <h3 class="stack-card__title">Scale meets <span class="em">atmosphere.</span></h3>
+              <div class="stack-card__row">
+                <p class="stack-card__meta">Resort · Aerials · 3D modeling · Launch film</p>
+                <button class="btn" type="button" data-film data-title="Duna Terraces" data-meta="Duna Terraces — Resort masterplan — Launch film" data-duration="1:48" data-poster="assets/img/project-duna.jpg" data-orientation="landscape" data-magnetic><span>Watch the film</span><i class="arr">▶</i></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stack-card" data-reveal>
+          <div class="stack-card__frame">
+            <div class="stack-card__img"><img src="assets/img/project-lumen.jpg" alt="Glass living room opening onto the city and water at Lumen Quay" width="1536" height="1024" loading="lazy"></div>
+            <div class="stack-card__top"><span>03 / 03</span><span>Lumen Quay · International film</span></div>
+            <div class="stack-card__body">
+              <h3 class="stack-card__title">Glass meets <span class="em">the horizon.</span></h3>
+              <div class="stack-card__row">
+                <p class="stack-card__meta">Film · Lifestyle · Visualization</p>
+                <button class="btn" type="button" data-film data-title="Lumen Quay" data-meta="Lumen Quay — International film" data-duration="1:36" data-poster="assets/img/project-lumen.jpg" data-orientation="landscape" data-magnetic><span>Watch the film</span><i class="arr">▶</i></button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== 05 / WHAT WE CREATE ==================== -->
+    <section class="section wrap" id="create">
+      <div class="section__head">
+        <div class="sec-head label"><span class="num">05</span><span>/ What we create</span></div>
+        <h2 class="h2 section__title">
+          <span class="rl"><span class="ri">The right format.</span></span>
+          <span class="rl"><span class="ri em" style="--d:.14s">The same creative eye.</span></span>
+        </h2>
+        <p class="lede" data-reveal>Films reveal the development. Visualization opens up its spaces. Websites and campaigns carry the story to the audience.</p>
+      </div>
+
+      <div class="create__cards">
+        <article class="create-card" data-reveal style="--d:0s">
+          <div class="create-card__img"><img src="assets/img/create-architecture.jpg" alt="Concept study — concrete monolith with a single warm slit of light" width="1448" height="1086" loading="lazy"></div>
+          <div class="create-card__body">
+            <div class="create-card__kicker"><span>Film / 01</span><span>4K UHD · 9:16 or 16:9</span></div>
+            <h3>Signature Film</h3>
+            <p>Architecture, context and story. Script and direction introduce façades, amenities and surroundings; editing, color and licensed music shape the final film.</p>
+            <ul>
+              <li>Art direction</li>
+              <li>Aerials and live capture</li>
+              <li>Color and music</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="create-card" data-reveal style="--d:.12s">
+          <div class="create-card__img"><img src="assets/img/create-lifestyle.jpg" alt="Concept study — golden hour inside a double-height lived-in interior" width="1448" height="1086" loading="lazy"></div>
+          <div class="create-card__body">
+            <div class="create-card__kicker"><span>Film / 02</span><span>Meridian Engine · Ultra Real</span></div>
+            <h3>Signature Film <span class="em">Ultra Real</span></h3>
+            <p>Our Signature Film pushed further — human presence, lived-in interiors and photoreal surroundings, with narrative sound design and frame-by-frame finishing.</p>
+            <ul>
+              <li>Frame-by-frame finishing</li>
+              <li>Human presence</li>
+              <li>Extended post-production</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <p class="create__fine" data-reveal>Both lines are delivered in 4K. Ultra Real adds denser scene direction and post-production. Format, runtime and deliverables are defined within each project's scope. Images above: conceptual Meridian studies.</p>
+
+      <div style="margin-top: clamp(40px,7vh,80px)">
+        <a class="svc-row" href="#contact" data-cursor="Open" data-reveal style="--d:0s">
+          <span class="svc-row__idx">03</span>
+          <span class="svc-row__main">
+            <h3>3D Visualization</h3>
+            <p>Images and spaces that make a project clear — massing, materials, lighting, stills, 360° tours and virtual reality.</p>
+          </span>
+          <span class="svc-row__go">↗</span>
+        </a>
+        <a class="svc-row" href="#sites" data-cursor="Open" data-reveal style="--d:.08s">
+          <span class="svc-row__idx">04</span>
+          <span class="svc-row__main">
+            <h3>Digital Experiences</h3>
+            <p>Websites and presentations that connect architecture, information and film into one navigable launch experience.</p>
+          </span>
+          <span class="svc-row__go">↗</span>
+        </a>
+        <a class="svc-row" href="#contact" data-cursor="Open" data-reveal style="--d:.16s">
+          <span class="svc-row__idx">05</span>
+          <span class="svc-row__main">
+            <h3>Brand &amp; Campaign</h3>
+            <p>Positioning, identity and campaign assets that carry the launch's visual direction into every channel.</p>
+          </span>
+          <span class="svc-row__go">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== 06 / DIGITAL EXPERIENCES ==================== -->
+    <section class="section wrap" id="sites">
+      <div class="section__head">
+        <div class="sec-head label"><span class="num">06</span><span>/ Digital experiences</span></div>
+        <h2 class="h2 section__title">
+          <span class="rl"><span class="ri">The next scene</span></span>
+          <span class="rl"><span class="ri em" style="--d:.14s">is interactive.</span></span>
+        </h2>
+        <p class="lede" data-reveal>Launch and corporate websites where films, imagery and information sit in one place. Navigation and motion give each project room to unfold.</p>
+      </div>
+
+      <div class="sites__grid">
+        <a class="site-card" href="#" rel="noopener" data-cursor="Visit" data-reveal style="--d:0s">
+          <span class="site-card__cover">
+            <img src="assets/img/site-vetra.jpg" alt="Cover featuring the visual identity of Vetra Studios" width="1536" height="1024" loading="lazy">
+            <span class="site-card__visit">Visit website ↗</span>
+          </span>
+          <span class="site-card__meta"><span>Residential project</span><span>01</span></span>
+          <span class="site-card__name">Vetra Studios</span>
+          <span class="site-card__tag">Urban architecture, interiors and rooftop.</span>
+        </a>
+
+        <a class="site-card" href="#" rel="noopener" data-cursor="Visit" data-reveal style="--d:.08s">
+          <span class="site-card__cover">
+            <img src="assets/img/site-altair.jpg" alt="Cover featuring the visual identity of Altair" width="1536" height="1024" loading="lazy">
+            <span class="site-card__visit">Visit website ↗</span>
+          </span>
+          <span class="site-card__meta"><span>Residential project</span><span>02</span></span>
+          <span class="site-card__name">Altair</span>
+          <span class="site-card__tag">Light, landscape and a new horizon.</span>
+        </a>
+
+        <a class="site-card" href="#" rel="noopener" data-cursor="Visit" data-reveal style="--d:.16s">
+          <span class="site-card__cover">
+            <img src="assets/img/site-corso.jpg" alt="Cover featuring the visual identity of Corso Build" width="1536" height="1024" loading="lazy">
+            <span class="site-card__visit">Visit website ↗</span>
+          </span>
+          <span class="site-card__meta"><span>Corporate website</span><span>03</span></span>
+          <span class="site-card__name">Corso Build</span>
+          <span class="site-card__tag">Material, precision and human scale.</span>
+        </a>
+
+        <a class="site-card" href="#" rel="noopener" data-cursor="Visit" data-reveal style="--d:.24s">
+          <span class="site-card__cover">
+            <img src="assets/img/site-aurora.jpg" alt="Cover featuring the visual identity of Aurora North" width="1536" height="1024" loading="lazy">
+            <span class="site-card__visit">Visit website ↗</span>
+          </span>
+          <span class="site-card__meta"><span>Corporate website</span><span>04</span></span>
+          <span class="site-card__name">Aurora North</span>
+          <span class="site-card__tag">Construction and architecture in perspective.</span>
+        </a>
+
+        <a class="site-card" href="#" rel="noopener" data-cursor="Visit" data-reveal style="--d:.32s">
+          <span class="site-card__cover">
+            <img src="assets/img/site-casa-alba.jpg" alt="Cover featuring the visual identity of Casa Alba" width="1536" height="1024" loading="lazy">
+            <span class="site-card__visit">Visit website ↗</span>
+          </span>
+          <span class="site-card__meta"><span>Residential project</span><span>05</span></span>
+          <span class="site-card__name">Casa Alba</span>
+          <span class="site-card__tag">Nature, light and a rhythm of its own.</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== 07 / FILM PORTFOLIO ==================== -->
+    <section class="section" id="verticals">
+      <div class="wrap section__head">
+        <div class="sec-head label"><span class="num">07</span><span>/ Film portfolio</span></div>
+        <h2 class="h2 section__title">
+          <span class="rl"><span class="ri">More films.</span></span>
+          <span class="rl"><span class="ri em" style="--d:.14s">New perspectives.</span></span>
+        </h2>
+        <p class="lede" data-reveal>Launches, interiors, landscapes and works in progress — a running reel from the Meridian archive.</p>
+      </div>
+
+      <div class="wrap verticals__bar">
+        <div>
+          <p class="label" style="margin-bottom:10px">Vertical / 9:16</p>
+          <h3 style="font-size:clamp(20px,2.2vw,30px);font-weight:540;letter-spacing:-0.02em">Vertical stories. <span class="em">The same cinematic direction.</span></h3>
+        </div>
+        <div class="verticals__count">
+          <div class="verticals__nav">
+            <button id="vPrev" type="button" aria-label="Previous film">←</button>
+            <button id="vNext" type="button" aria-label="Next film">→</button>
+          </div>
+          <span><b id="vFrom">01</b><span class="thin">–</span><b>07</b> / <span id="vTotal">07</span></span>
+        </div>
+      </div>
+
+      <div class="verticals__track" id="verticalsTrack" data-cursor="Drag">
+        <article class="v-card" data-film data-title="Verano Bay" data-meta="Verano Bay — Residential · Water · Place" data-duration="1:04" data-poster="assets/img/vertical-verano.jpg" data-orientation="portrait" data-cursor="Play" role="button" tabindex="0">
+          <figure class="v-card__poster">
+            <img src="assets/img/vertical-verano.jpg" alt="Waterfront residences reflected in still water at Verano Bay" width="941" height="1672" loading="lazy">
+            <div class="v-card__meta-top"><span>V01</span><span>01:04</span></div>
+            <span class="v-card__play">▶</span>
+          </figure>
+          <div class="v-card__body">
+            <p class="v-card__tags">Residential · Water · Place</p>
+            <h4 class="v-card__title">Verano Bay</h4>
+            <span class="v-card__watch">Watch <b>▶</b></span>
+          </div>
+        </article>
+
+        <article class="v-card" data-film data-title="Ilha Clara" data-meta="Ilha Clara — Nature · Lifestyle" data-duration="0:59" data-poster="assets/img/vertical-ilha.jpg" data-orientation="portrait" data-cursor="Play" role="button" tabindex="0">
+          <figure class="v-card__poster">
+            <img src="assets/img/vertical-ilha.jpg" alt="Kayaks crossing a glassy lagoon at Ilha Clara" width="941" height="1672" loading="lazy">
+            <div class="v-card__meta-top"><span>V02</span><span>00:59</span></div>
+            <span class="v-card__play">▶</span>
+          </figure>
+          <div class="v-card__body">
+            <p class="v-card__tags">Nature · Lifestyle</p>
+            <h4 class="v-card__title">Ilha Clara</h4>
+            <span class="v-card__watch">Watch <b>▶</b></span>
+          </div>
+        </article>
+
+        <article class="v-card" data-film data-title="Torre Axis" data-meta="Torre Axis — Urban · Skyline" data-duration="1:00" data-poster="assets/img/vertical-axis.jpg" data-orientation="portrait" data-cursor="Play" role="button" tabindex="0">
+          <figure class="v-card__poster">
+            <img src="assets/img/vertical-axis.jpg" alt="Torre Axis climbing into a low dusk sky above the city" width="941" height="1672" loading="lazy">
+            <div class="v-card__meta-top"><span>V03</span><span>01:00</span></div>
+            <span class="v-card__play">▶</span>
+          </figure>
+          <div class="v-card__body">
+            <p class="v-card__tags">Urban · Skyline</p>
+            <h4 class="v-card__title">Torre Axis</h4>
+            <span class="v-card__watch">Watch <b>▶</b></span>
+          </div>
+        </article>
+
+        <article class="v-card" data-film data-title="Vetra 12" data-meta="Vetra 12 — Commercial · City flow" data-duration="1:04" data-poster="assets/img/vertical-vetra.jpg" data-orientation="portrait" data-cursor="Play" role="button" tabindex="0">
+          <figure class="v-card__poster">
+            <img src="assets/img/vertical-vetra.jpg" alt="Façade of Vetra 12 catching warm evening light" width="941" height="1672" loading="lazy">
+            <div class="v-card__meta-top"><span>V04</span><span>01:04</span></div>
+            <span class="v-card__play">▶</span>
+          </figure>
+          <div class="v-card__body">
+            <p class="v-card__tags">Commercial · City flow</p>
+            <h4 class="v-card__title">Vetra 12</h4>
+            <span class="v-card__watch">Watch <b>▶</b></span>
+          </div>
+        </article>
+
+        <article class="v-card" data-film data-title="Alameda Works" data-meta="Alameda Works — Construction · Process" data-duration="1:24" data-poster="assets/img/vertical-alameda.jpg" data-orientation="portrait" data-cursor="Play" role="button" tabindex="0">
+          <figure class="v-card__poster">
+            <img src="assets/img/vertical-alameda.jpg" alt="Cranes and concrete cores rising at Alameda Works" width="941" height="1672" loading="lazy">
+            <div class="v-card__meta-top"><span>V05</span><span>01:24</span></div>
+            <span class="v-card__play">▶</span>
+          </figure>
+          <div class="v-card__body">
+            <p class="v-card__tags">Construction · Process</p>
+            <h4 class="v-card__title">Alameda Works</h4>
+            <span class="v-card__watch">Watch <b>▶</b></span>
+          </div>
+        </article>
+
+        <div class="v-group">
+          <p class="v-group__label">Aurea Towers · 2 chapters · 9:16</p>
+          <div class="v-group__pair">
+            <article class="v-card" data-film data-title="Aurea — Experience" data-meta="Aurea Towers — Interiors · Lifestyle" data-duration="1:09" data-poster="assets/img/vertical-aurea-a.jpg" data-orientation="portrait" data-cursor="Play" role="button" tabindex="0">
+              <figure class="v-card__poster">
+                <img src="assets/img/vertical-aurea-a.jpg" alt="A couple sharing a quiet moment inside Aurea Towers" width="941" height="1672" loading="lazy">
+                <div class="v-card__meta-top"><span>V06.A</span><span>01:09</span></div>
+                <span class="v-card__play">▶</span>
+              </figure>
+              <div class="v-card__body">
+                <p class="v-card__tags">Interiors · Lifestyle</p>
+                <h4 class="v-card__title">Experience</h4>
+                <span class="v-card__watch">Watch <b>▶</b></span>
+              </div>
+            </article>
+
+            <article class="v-card" data-film data-title="Aurea — Construction" data-meta="Aurea Towers — Construction · Evolution" data-duration="1:03" data-poster="assets/img/vertical-aurea-b.jpg" data-orientation="portrait" data-cursor="Play" role="button" tabindex="0">
+              <figure class="v-card__poster">
+                <img src="assets/img/vertical-aurea-b.jpg" alt="Aurea tower core at dusk, floors climbing week by week" width="941" height="1672" loading="lazy">
+                <div class="v-card__meta-top"><span>V06.B</span><span>01:03</span></div>
+                <span class="v-card__play">▶</span>
+              </figure>
+              <div class="v-card__body">
+                <p class="v-card__tags">Construction · Evolution</p>
+                <h4 class="v-card__title">Construction &amp; evolution</h4>
+                <span class="v-card__watch">Watch <b>▶</b></span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <!-- archive -->
+      <div class="archive wrap" id="archive">
+        <div class="archive__head label"><span class="num" style="color:var(--accent)">A/</span><span>Archive — selected</span></div>
+        <h3 class="section__title" style="font-size:clamp(30px,4.6vw,64px);margin-bottom:34px">
+          <span class="rl"><span class="ri">Other worlds</span></span>
+          <span class="rl"><span class="ri em" style="--d:.12s">in motion.</span></span>
+        </h3>
+        <div class="archive__grid">
+          <article class="arc-card" data-film data-title="Atlas" data-meta="Atlas — Urban visualization" data-duration="0:48" data-poster="assets/img/project-duna.jpg" data-orientation="landscape" data-cursor="Play" role="button" tabindex="0" data-reveal style="--d:0s">
+            <div class="arc-card__cover"><img src="assets/img/project-duna.jpg" alt="Aerial view over the Atlas development at dusk" width="1536" height="1024" loading="lazy"></div>
+            <p class="arc-card__idx">A01</p>
+            <p class="arc-card__tags">Urban visualization</p>
+            <h4 class="arc-card__title">Atlas</h4>
+            <span class="arc-card__watch">Watch film ↗</span>
+          </article>
+          <article class="arc-card" data-film data-title="Rivi" data-meta="Rivi — Residential · Shared living" data-duration="0:52" data-poster="assets/img/create-lifestyle.jpg" data-orientation="landscape" data-cursor="Play" role="button" tabindex="0" data-reveal style="--d:.06s">
+            <div class="arc-card__cover"><img src="assets/img/create-lifestyle.jpg" alt="Family sharing the afternoon inside Rivi's common house" width="1448" height="1086" loading="lazy"></div>
+            <p class="arc-card__idx">A02</p>
+            <p class="arc-card__tags">Residential · Shared living</p>
+            <h4 class="arc-card__title">Rivi</h4>
+            <span class="arc-card__watch">Watch film ↗</span>
+          </article>
+          <article class="arc-card" data-film data-title="Marina Club" data-meta="Marina Club — Lifestyle · Gated community" data-duration="1:02" data-poster="assets/img/film-solmare.jpg" data-orientation="landscape" data-cursor="Play" role="button" tabindex="0" data-reveal style="--d:.12s">
+            <div class="arc-card__cover"><img src="assets/img/film-solmare.jpg" alt="Poolside evening at Marina Club" width="1672" height="941" loading="lazy"></div>
+            <p class="arc-card__idx">A03</p>
+            <p class="arc-card__tags">Lifestyle · Gated community</p>
+            <h4 class="arc-card__title">Marina Club</h4>
+            <span class="arc-card__watch">Watch film ↗</span>
+          </article>
+          <article class="arc-card" data-film data-title="Mono" data-meta="Mono — Signature architecture" data-duration="0:44" data-poster="assets/img/create-architecture.jpg" data-orientation="landscape" data-cursor="Play" role="button" tabindex="0" data-reveal style="--d:.18s">
+            <div class="arc-card__cover"><img src="assets/img/create-architecture.jpg" alt="Concrete monolith gallery in fog, study for Mono" width="1448" height="1086" loading="lazy"></div>
+            <p class="arc-card__idx">A04</p>
+            <p class="arc-card__tags">Signature architecture</p>
+            <h4 class="arc-card__title">Mono</h4>
+            <span class="arc-card__watch">Watch film ↗</span>
+          </article>
+          <article class="arc-card" data-film data-title="Vega" data-meta="Vega — City lights · Skyline" data-duration="0:57" data-poster="assets/img/project-lumen.jpg" data-orientation="landscape" data-cursor="Play" role="button" tabindex="0" data-reveal style="--d:.24s">
+            <div class="arc-card__cover"><img src="assets/img/project-lumen.jpg" alt="City lights from the Vega penthouse at night" width="1536" height="1024" loading="lazy"></div>
+            <p class="arc-card__idx">A05</p>
+            <p class="arc-card__tags">City lights · Skyline</p>
+            <h4 class="arc-card__title">Vega</h4>
+            <span class="arc-card__watch">Watch film ↗</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 08 / WORKING TOGETHER ==================== -->
+    <section class="section wrap" id="process">
+      <div class="section__head">
+        <div class="sec-head label"><span class="num">08</span><span>/ Working together</span></div>
+        <h2 class="h2 section__title">
+          <span class="rl"><span class="ri">What your project needs.</span></span>
+          <span class="rl"><span class="ri em" style="--d:.14s">What we deliver.</span></span>
+        </h2>
+      </div>
+
+      <div class="steps">
+        <div class="step" data-reveal style="--d:0s">
+          <span class="step__num">01</span>
+          <h3>Source</h3>
+          <p>Plans, renderings, site material and technical information — the raw matter of the film.</p>
+        </div>
+        <div class="step" data-reveal style="--d:.08s">
+          <span class="step__num">02</span>
+          <h3>Real-world references</h3>
+          <p>Photographed references align scale, light and material so nothing feels simulated.</p>
+        </div>
+        <div class="step" data-reveal style="--d:.16s">
+          <span class="step__num">03</span>
+          <h3>Visual direction</h3>
+          <p>We define the visual language and the role of each deliverable before a frame is made.</p>
+        </div>
+        <div class="step" data-reveal style="--d:.24s">
+          <span class="step__num">04</span>
+          <h3>Delivery</h3>
+          <p>Film, digital experience and campaign assets prepared to the agreed scope — organized for your team.</p>
+        </div>
+      </div>
+
+      <div class="clients__head">
+        <div>
+          <p class="label" style="margin-bottom:10px">Selected clients</p>
+          <h3 class="section__title" style="font-size:clamp(26px,3.6vw,48px);max-width:16ch">
+            <span class="rl"><span class="ri">Trust, built</span></span>
+            <span class="rl"><span class="ri em" style="--d:.12s">project after project.</span></span>
+          </h3>
+        </div>
+        <p class="lede" style="font-size:15px" data-reveal>A selection of partners who have trusted their launches to Meridian.</p>
+        <button class="marquee-toggle" id="marqueeToggle" type="button" aria-pressed="false">
+          <span class="state">Pause motion</span><span class="glyph">Ⅱ</span>
+        </button>
+      </div>
+
+      <div class="marquee" id="clientsMarquee" data-reveal>
+        <div class="marquee__belt" aria-label="Client logos, scrolling">
+          <!-- set 1 -->
+          <span class="marquee__mark"><svg viewBox="0 0 120 30" role="img" aria-label="Vetra"><text x="0" y="22" font-family="Inter,sans-serif" font-size="20" font-weight="700" letter-spacing="4">VETRA</text></svg></span>
+          <span class="marquee__mark"><svg viewBox="0 0 150 30" role="img" aria-label="Nordvik"><text x="0" y="22" font-family="Inter,sans-serif" font-size="19" font-weight="500" letter-spacing="2">NORDVIK</text></svg></span>
+          <span class="marquee__mark"><svg viewBox="0 0 130 30" role="img" aria-label="Caja and Co"><text x="0" y="22" font-family="Inter,sans-serif" font-size="18" font-weight="600" letter-spacing="1">CAJA&amp;CO</text></svg></span>
+          <span class="marquee__mark"><svg viewBox="0 0 140 30" role="img" aria-label="Riva Park"><text x="0" y="22" font-family="Inter,sans-serif" font-size="18" font-weight="400" letter-spacing="5">RIVA PARK</text></svg></span>
+          <span class="marquee__mark"><svg viewBox="0 0 130 30" role="img" aria-label="MC Build"><text x="0" y="22" font-family="Inter,sans-serif" font-size="19" font-weight="800" letter-spacing="2">MC·BUILD</text></svg></span>
+          <span class="marquee__mark"><svg viewBox="0 0 140 30" role="img" aria-label="K2 Estates"><text x="0" y="22" font-family="Inter,sans-serif" font-size="18" font-weight="500" letter-spacing="3">K2 ESTATES</text></svg></span>
+          <span class="marquee__mark"><svg viewBox="0 0 120 30" role="img" aria-label="Onda"><text x="0" y="22" font-family="Inter,sans-serif" font-size="21" font-weight="600" font-style="italic" letter-spacing="1">onda</text></svg></span>
+          <!-- set 2 (duplicate for the loop) -->
+          <span class="marquee__mark" aria-hidden="true"><svg viewBox="0 0 120 30"><text x="0" y="22" font-family="Inter,sans-serif" font-size="20" font-weight="700" letter-spacing="4">VETRA</text></svg></span>
+          <span class="marquee__mark" aria-hidden="true"><svg viewBox="0 0 150 30"><text x="0" y="22" font-family="Inter,sans-serif" font-size="19" font-weight="500" letter-spacing="2">NORDVIK</text></svg></span>
+          <span class="marquee__mark" aria-hidden="true"><svg viewBox="0 0 130 30"><text x="0" y="22" font-family="Inter,sans-serif" font-size="18" font-weight="600" letter-spacing="1">CAJA&amp;CO</text></svg></span>
+          <span class="marquee__mark" aria-hidden="true"><svg viewBox="0 0 140 30"><text x="0" y="22" font-family="Inter,sans-serif" font-size="18" font-weight="400" letter-spacing="5">RIVA PARK</text></svg></span>
+          <span class="marquee__mark" aria-hidden="true"><svg viewBox="0 0 130 30"><text x="0" y="22" font-family="Inter,sans-serif" font-size="19" font-weight="800" letter-spacing="2">MC·BUILD</text></svg></span>
+          <span class="marquee__mark" aria-hidden="true"><svg viewBox="0 0 140 30"><text x="0" y="22" font-family="Inter,sans-serif" font-size="18" font-weight="500" letter-spacing="3">K2 ESTATES</text></svg></span>
+          <span class="marquee__mark" aria-hidden="true"><svg viewBox="0 0 120 30"><text x="0" y="22" font-family="Inter,sans-serif" font-size="21" font-weight="600" font-style="italic" letter-spacing="1">onda</text></svg></span>
+        </div>
+      </div>
+
+      <div class="clients__line label" data-reveal>
+        <span>Remote-first studio</span>
+        <span>Worldwide collaboration</span>
+        <span>Clear project stages</span>
+      </div>
+    </section>
+
+    <!-- ==================== 09 / FAQ ==================== -->
+    <section class="section wrap" id="faq">
+      <div class="section__head">
+        <div class="sec-head label"><span class="num">09</span><span>/ Before we begin</span></div>
+        <h2 class="h2 section__title">
+          <span class="rl"><span class="ri">Clarity to decide.</span></span>
+        </h2>
+      </div>
+
+      <div class="faq__list" data-reveal>
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false">
+            <span>Can the film be created before construction begins?</span>
+            <span class="faq__x" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a"><div><p>Yes — it is a Meridian specialty. Working from plans, project information and references, we bring façades, amenities, interiors and surroundings to life before the first brick is laid.</p></div></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false">
+            <span>What can a delivery include?</span>
+            <span class="faq__x" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a"><div><p>A 4K master, campaign cutdowns, a launch website or landing page, identity assets, music and sound design, plus organized source files for your team — the scope is agreed item by item.</p></div></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false">
+            <span>How long does a project take?</span>
+            <span class="faq__x" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a"><div><p>Timing follows scope, format and volume. After the briefing you receive a defined schedule with clear stages and checkpoints, so nobody wonders where the film stands.</p></div></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false">
+            <span>What is the first step?</span>
+            <span class="faq__x" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a"><div><p>Tell us what you need to present and where the project stands. Meridian reviews the details, clarifies the essentials and returns a scope, timeline and proposal.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 10 / CONTACT ==================== -->
+    <section class="section wrap" id="contact">
+      <div class="section__head">
+        <div class="sec-head label"><span class="num">10</span><span>/ Let's talk</span></div>
+      </div>
+
+      <div class="contact__grid">
+        <div class="contact__side">
+          <h2 class="h2 section__title">
+            <span class="rl"><span class="ri">Your next launch</span></span>
+            <span class="rl"><span class="ri em" style="--d:.14s">begins with direction.</span></span>
+          </h2>
+          <p class="lede" data-reveal>Tell us where the project stands and what you need to present. We will review the details and recommend a format, scope and next steps.</p>
+          <ul data-reveal style="--d:.1s">
+            <li>Consistent direction across film, visualization and digital</li>
+            <li>Scope and stages agreed before production starts</li>
+            <li>Deliverables planned for your channels from day one</li>
+          </ul>
+          <p data-reveal style="--d:.18s">
+            <a class="arrow-link" href="https://wa.me/923000000000" target="_blank" rel="noopener">Prefer a direct conversation? WhatsApp <span class="arr">↗</span></a>
+          </p>
+        </div>
+
+        <form class="form" id="briefForm" data-reveal novalidate>
+          <div class="form__head">
+            <p class="label">New project / Meridian Studio</p>
+            <h3>Tell us what comes next.</h3>
+            <p>Project, place and timing. We start with what you already know.</p>
+          </div>
+
+          <div class="form__body" style="display:grid;gap:26px">
+            <div class="hp" aria-hidden="true">
+              <label>Leave this field empty <input type="text" name="company-website" tabindex="-1" autocomplete="off"></label>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="fName">Your name *</label>
+                <input id="fName" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="fPhone">WhatsApp / phone</label>
+                <input id="fPhone" name="phone" type="tel" autocomplete="tel">
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="fEmail">Email</label>
+                <input id="fEmail" name="email" type="email" autocomplete="email">
+              </div>
+              <div class="field">
+                <label for="fBrand">Brand / company</label>
+                <input id="fBrand" name="brand" type="text" autocomplete="organization">
+              </div>
+            </div>
+
+            <div class="field field--select">
+              <label for="fService">Service of interest</label>
+              <select id="fService" name="service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option>Signature Film</option>
+                <option>Signature Film · Ultra Real</option>
+                <option>3D Visualization &amp; Immersion</option>
+                <option>Web Experience</option>
+                <option>Branding &amp; Art Direction</option>
+                <option>Landing Page &amp; Campaign</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="fMsg">What are you looking to launch with Meridian? *</label>
+              <textarea id="fMsg" name="message" rows="4" required></textarea>
+            </div>
+
+            <p class="form__note">Leave an email address or a phone number with area code so we can reply. Fields marked * are required. Your details are used only to respond to this inquiry — see the <a href="privacy.html">privacy note</a>.</p>
+
+            <div class="form__foot">
+              <button class="btn btn--solid" type="submit" data-magnetic>
+                <span class="btn-label">Send project brief</span><i class="arr">↗</i>
+              </button>
+              <p class="form__note" style="margin:0">Replies within one business day.</p>
+            </div>
+          </div>
+
+          <div class="form__ok" aria-live="polite">
+            <span class="stamp" id="formStamp" tabindex="-1">✓</span>
+            <h3 style="font-size:26px;font-weight:540">Brief received.</h3>
+            <p class="form__note">Thank you — Meridian will reply within one business day.<br>For anything urgent, <a href="https://wa.me/923000000000" target="_blank" rel="noopener">WhatsApp us ↗</a>.</p>
+            <button class="btn" type="button" id="formReset"><span>Send another</span></button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <h2 class="footer__big" data-reveal aria-hidden="true">Meridian</h2>
+    <div class="footer__grid">
+      <div class="footer__col">
+        <p class="label">Studio</p>
+        <p>Visual engineering for real estate launches — films, 3D visualization and immersive websites, directed as cinema.</p>
+      </div>
+      <div class="footer__col">
+        <p class="label">Sitemap</p>
+        <a class="u-sweep" href="#films">Films</a>
+        <a class="u-sweep" href="#work">Projects</a>
+        <a class="u-sweep" href="#create">Services</a>
+        <a class="u-sweep" href="#contact">Contact</a>
+      </div>
+      <div class="footer__col">
+        <p class="label">Contact</p>
+        <a class="u-sweep" href="mailto:hello@meridian.studio">hello@meridian.studio</a>
+        <a class="u-sweep" href="https://wa.me/923000000000" target="_blank" rel="noopener">+92 300 000 0000</a>
+        <p>Remote · Worldwide</p>
+      </div>
+      <div class="footer__col">
+        <p class="label">Elsewhere</p>
+        <a class="u-sweep" href="#" rel="noopener">Instagram</a>
+        <a class="u-sweep" href="#" rel="noopener">Behance</a>
+        <a class="u-sweep" href="#" rel="noopener">Vimeo</a>
+      </div>
+    </div>
+    <div class="footer__base">
+      <p>© <span id="year">2026</span> Meridian Studio. All frames reserved.</p>
+      <p>Made frame by frame — no templates harmed.</p>
+    </div>
+  </footer>
+
+  <!-- ==================== FILM MODAL ==================== -->
+  <div class="modal" id="filmModal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Meridian film preview">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__stage">
+      <div class="modal__head">
+        <div>
+          <p class="label" style="color:var(--accent);margin-bottom:6px">Meridian film</p>
+          <h3 class="modal__title" id="mTitle">Film</h3>
+          <p class="modal__meta" id="mMeta">—</p>
+        </div>
+        <button class="modal__close" id="mClose" type="button" data-close aria-label="Close film preview">✕</button>
+      </div>
+      <div class="modal__frame">
+        <span class="modal__bar modal__bar--top"></span>
+        <span class="modal__bar modal__bar--bottom"></span>
+        <img id="mPoster" src="assets/img/film-solmare.jpg" alt="">
+        <div class="modal__hud">
+          <button class="modal__toggle" id="mToggle" type="button" aria-label="Play or pause preview">❚❚</button>
+          <div class="modal__scrub" id="mScrub" role="slider" aria-label="Seek"><i id="mFill"></i></div>
+          <span id="mTime">0:00</span><span style="opacity:.5">/</span><span id="mDur">0:00</span>
+          <span class="modal__rec">Proxy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">
+    <svg class="ring" viewBox="0 0 58 58" aria-hidden="true"><circle cx="29" cy="29" r="25.5"></circle></svg>
+    <span>↑</span>
+  </button>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

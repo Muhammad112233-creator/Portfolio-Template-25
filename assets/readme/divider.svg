@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="14" viewBox="0 0 880 14">
+  <defs>
+    <linearGradient id="rb" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff5f6d">
+        <animate attributeName="stop-color" values="#ff5f6d;#ffc371;#f7ff5f;#5fff8f;#5fd4ff;#b45fff;#ff5fd0;#ff5f6d" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#5fff8f">
+        <animate attributeName="stop-color" values="#5fff8f;#5fd4ff;#b45fff;#ff5fd0;#ff5f6d;#ffc371;#f7ff5f;#5fff8f" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#5fd4ff">
+        <animate attributeName="stop-color" values="#5fd4ff;#b45fff;#ff5fd0;#ff5f6d;#ffc371;#f7ff5f;#5fff8f;#5fd4ff" dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="6" width="880" height="2" rx="1" fill="url(#rb)" opacity="0.55"/>
+  <circle cy="7" r="3.4" fill="#ffffff">
+    <animate attributeName="cx" values="0;880;0" dur="7s" repeatCount="indefinite"/>
+  </circle>
+</svg>

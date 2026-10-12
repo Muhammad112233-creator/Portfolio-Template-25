@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="220" viewBox="0 0 900 220">
+  <defs>
+    <linearGradient id="rainbow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff5f6d">
+        <animate attributeName="stop-color" values="#ff5f6d;#ffc371;#f7ff5f;#5fff8f;#5fd4ff;#b45fff;#ff5fd0;#ff5f6d" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="25%" stop-color="#ffc371">
+        <animate attributeName="stop-color" values="#ffc371;#f7ff5f;#5fff8f;#5fd4ff;#b45fff;#ff5fd0;#ff5f6d;#ffc371" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#5fff8f">
+        <animate attributeName="stop-color" values="#5fff8f;#5fd4ff;#b45fff;#ff5fd0;#ff5f6d;#ffc371;#f7ff5f;#5fff8f" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="75%" stop-color="#5fd4ff">
+        <animate attributeName="stop-color" values="#5fd4ff;#b45fff;#ff5fd0;#ff5f6d;#ffc371;#f7ff5f;#5fff8f;#5fd4ff" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#ff5fd0">
+        <animate attributeName="stop-color" values="#ff5fd0;#ff5f6d;#ffc371;#f7ff5f;#5fff8f;#5fd4ff;#b45fff;#ff5fd0" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <linearGradient id="fade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#888888" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#cccccc"/>
+      <stop offset="100%" stop-color="#888888" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="220" fill="#050506"/>
+  <text x="450" y="104" text-anchor="middle" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="76" font-weight="800" letter-spacing="14" fill="url(#rainbow)">MERIDIAN</text>
+  <text x="450" y="150" text-anchor="middle" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="500" letter-spacing="6" fill="#9a958a">VISUAL ENGINEERING FOR REAL ESTATE LAUNCHES</text>
+  <rect x="250" y="176" width="400" height="2" fill="url(#fade)">
+    <animate attributeName="x" values="250;270;250" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="width" values="400;360;400" dur="6s" repeatCount="indefinite"/>
+  </rect>
+  <circle cx="250" cy="177" r="3" fill="#c9a24b">
+    <animate attributeName="cx" values="250;650;250" dur="6s" repeatCount="indefinite"/>
+  </circle>
+</svg>
